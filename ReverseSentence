@@ -1,0 +1,31 @@
+// Java code​​​​​​‌​‌‌​‌‌​‌‌​‌‌​​‌‌​​‌​‌​​​ below
+// Write your answer here, and then test your code.
+// Your job is to implement the reverseEachWord() method.
+
+class Answer {
+
+    // Change these boolean values to control whether you see 
+    // the expected result and/or hints.
+    static boolean showExpectedResult = false;
+    static boolean showHints = false;
+
+    private static String reverse(String word) {
+		StringBuilder sb = new StringBuilder(word);
+		return sb.reverse().toString();
+	}
+
+    // Return a new String with each word reversed
+    static String reverseEachWord(String sentence) {
+        // Your code goes here.
+        if (sentence==null||sentence.isEmpty()){
+        return "";
+    }
+StringBuilder result=new StringBuilder();
+String[] words=sentence.split(" ");
+for(String word:words){
+    result.append(reverse(word));
+    result.append(" ");
+}
+result.trimToSize();
+return result.toString();
+}}
